@@ -41,7 +41,7 @@ public class Controller {
         getTermRandom();
 
         addNewTerm.setOnAction(event -> {
-            String scene = "app.fxml";
+            String scene = "../resources/app.fxml";
             openNewScene(scene);
         });
 
@@ -104,6 +104,6 @@ public class Controller {
 
     private void deleteTerm() {
         Term termElem = new Term(term.getText(), termDescription.getText());
-        Database.deletTerm(termElem);
+        Database.deleteTerm(termElem);
     }
 }

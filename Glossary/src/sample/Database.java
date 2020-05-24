@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class Database {
-    static final String DB_URL = "jdbc:sqlite:D:\\Glossary\\glossary.db";
+    static final String DB_URL = "jdbc:sqlite:src/resources/glossary.db";
     static final String USER = "sa";
     static final String PASS = "";
     static final String TABLE = "glossary";
@@ -39,7 +39,7 @@ public class Database {
         return list;
     }
 
-    public static void deletTerm(Term term) {
+    public static void deleteTerm(Term term) {
         try (Connection connection = DriverManager.getConnection(DB_URL, USER, PASS)) {
             try (Statement statement = connection.createStatement()) {
                 statement.execute("DELETE FROM " + TABLE + " WHERE (" + TERM + " = " + "\"" + term.getTerm() + "\")");
