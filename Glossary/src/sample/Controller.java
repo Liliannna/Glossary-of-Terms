@@ -57,7 +57,7 @@ public class Controller {
                                                 getTermRandom();
                                             }
                                         },
-                0, 20000);
+                0, 40000);
 
     }
 
